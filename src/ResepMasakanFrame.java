@@ -376,14 +376,14 @@ public class ResepMasakanFrame extends javax.swing.JFrame {
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icon-main.png"))); // NOI18N
 
-        jButton1.setText("Entry");
+        jButton1.setText("Add  Recipe");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Data");
+        jButton2.setText("Recipe List");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -473,9 +473,9 @@ public class ResepMasakanFrame extends javax.swing.JFrame {
                 .addGroup(homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel15)
                     .addComponent(jLabel28))
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, homePanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(88, Short.MAX_VALUE)
                 .addComponent(jLabel5)
                 .addGap(77, 77, 77))
         );
@@ -658,7 +658,7 @@ public class ResepMasakanFrame extends javax.swing.JFrame {
             }
         });
 
-        btnView.setText("View");
+        btnView.setText("Detail");
         btnView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnViewActionPerformed(evt);
@@ -943,13 +943,13 @@ public class ResepMasakanFrame extends javax.swing.JFrame {
 
         } else {
             // Jika tidak ada baris yang dipilih, tampilkan peringatan
-            JOptionPane.showMessageDialog(this, "Please select a recipe to view.", "No Recipe Selected", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Please select a recipe to view.", "Selection Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_btnViewActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         int selectedRow = tableRecipes.getSelectedRow(); // Mendapatkan baris yang dipilih
-    
+        
         if (selectedRow != -1) { // Jika ada baris yang dipilih
             // Ambil data dari tabel berdasarkan baris yang dipilih
             String code = tableRecipes.getValueAt(selectedRow, 0).toString();
@@ -979,6 +979,10 @@ public class ResepMasakanFrame extends javax.swing.JFrame {
 
             // Memvalidasi ulang tata letak bodyPanel agar komponen baru ditampilkan dengan benar
             bodyPanel.revalidate();
+        } else {
+            // Jika tidak ada baris yang dipilih, tampilkan pesan error      
+            JOptionPane.showMessageDialog(this, "Please select a recipe to edit", "Selection Error", JOptionPane.ERROR_MESSAGE);
+            return;
         }
     }//GEN-LAST:event_jButton6ActionPerformed
 
