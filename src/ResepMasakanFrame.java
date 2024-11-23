@@ -821,6 +821,9 @@ public class ResepMasakanFrame extends javax.swing.JFrame {
 
         // Memvalidasi ulang tata letak bodyPanel agar komponen baru ditampilkan dengan benar
         bodyPanel.revalidate();
+        
+        //Memanggil method load data untuk merefresh resep saat menekan tombol data
+        loadRecipes();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
