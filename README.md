@@ -25,7 +25,7 @@ Aplikasi Resep Masakan adalah sebuah aplikasi manajemen resep berbasis desktop y
 
 ## Demo
 
-![App Screenshot](https://youtu.be/3zW_EwCGO48)
+https://youtu.be/3zW_EwCGO48
 
 ## Screenshot
 
